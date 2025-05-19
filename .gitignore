@@ -1,0 +1,11 @@
+# .gitignore
+**/bin/
+**/obj/
+**/node_modules/
+*.env
+.vscode/
+.env.*
+.DS_Store
+*.user
+*.suo
+*.db
