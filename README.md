@@ -64,42 +64,57 @@ AccessControlSystem es una aplicación modular diseñada para gestionar el contr
 
 ### AccessControlSystem.Application/
 
+# Estructura del Proyecto AccessControlSystem
+
+## AccessControlSystem.Application/
+
 - **Commands/**  
-  Aquí van los archivos `.cs` que representan comandos o acciones específicas de negocio, como `CreateUserCommand.cs`, `UpdatePermissionCommand.cs`.  
-  Son clases que contienen la lógica para ejecutar operaciones (normalmente con el patrón CQRS).
+  Contiene las clases que representan comandos o acciones específicas del negocio, implementando la lógica para realizar operaciones concretas, siguiendo generalmente el patrón CQRS (Command Query Responsibility Segregation). Por ejemplo: `CreatePermissionTypeCommand.cs`, `ModifyPermissionCommand.cs`.
 
 - **DTOs/**  
-  Acá están los Data Transfer Objects — clases simples que modelan datos para transportar entre capas o a través de la red. Ejemplo: `UserDto.cs`, `PermissionDto.cs`.
+  Aquí se encuentran los Data Transfer Objects (DTOs), clases simples que modelan y transfieren datos entre capas o servicios, evitando exponer entidades directamente. Ejemplos: `PermissionDto.cs`, `PermissionTypeDto.cs`.
 
 - **External/**  
-  Aquí suele ir el código que se conecta con servicios externos (APIs, SDKs, integraciones de terceros). Por ejemplo, `ExternalAuthService.cs`, `PaymentGatewayClient.cs`.
+  Contiene interfaces y clases para integrar servicios externos o sistemas de terceros, como clientes de Kafka, servicios de búsqueda externa, APIs o SDKs. Por ejemplo: `IKafkaProducer.cs`, `IElasticsearchService.cs`.
 
 - **Mappings/**  
-  Aquí defines los perfiles o configuraciones para mapeo entre objetos (por ejemplo con AutoMapper). Archivos típicos: `UserMappingProfile.cs`, `PermissionMappingProfile.cs`.
+  Define perfiles de mapeo para convertir entre entidades, DTOs y otros objetos, comúnmente usando AutoMapper u otra librería de mapeo. Ejemplo: `MappingProfile.cs`.
 
-### AccessControlSystem.Domain/
+- **Queries/**  
+  Aquí van las clases que implementan las consultas o queries para obtener datos, generalmente parte del patrón CQRS. Incluye los handlers y objetos de consulta. Ejemplos: `GetPermissionsQuery.cs`, `GetPermissionsHandler.cs`.
+
+---
+
+## AccessControlSystem.Domain/
 
 - **Entities/**  
-  Aquí están las clases que representan las entidades del dominio, con su lógica y propiedades, por ejemplo `User.cs`, `Permission.cs`.
+  Contiene las clases que representan las entidades centrales del dominio, con sus propiedades y lógica de negocio encapsulada. Por ejemplo: `Permission.cs`, `PermissionType.cs`.
 
 - **Enums/**  
-  Aquí defines enumeraciones usadas en el dominio, por ejemplo `PermissionType.cs`, `UserRole.cs`.
+  Define enumeraciones propias del dominio que representan tipos o estados específicos, por ejemplo: `OperationType.cs`.
 
-- **Exceptions/**  
-  Aquí defines excepciones específicas del dominio o negocio, como `UserNotFoundException.cs`, `PermissionDeniedException.cs`.
+- **Repositories/**  
+  Interfaces que definen contratos para la persistencia y recuperación de entidades, promoviendo abstracción y desacoplamiento. Ejemplos: `IPermissionRepository.cs`, `IUnitOfWork.cs`.
 
-### AccessControlSystem.Infrastructure/
+---
+
+## AccessControlSystem.Infrastructure/
 
 - **Persistence/**  
-  Aquí van las clases que se encargan de la persistencia, como implementaciones de repositorios, contexto de base de datos (`DbContext` en EF), migraciones. Ejemplos: `UserRepository.cs`, `AccessControlDbContext.cs`.
+  Implementación concreta de repositorios, unidad de trabajo y el contexto de base de datos (ej. Entity Framework `DbContext`). Gestiona la interacción directa con la base de datos. Ejemplos: `PermissionRepository.cs`, `ApplicationDbContext.cs`.
+
+- **Messaging/**  
+  Clases y configuraciones para la comunicación con sistemas de mensajería o eventos, como Kafka. Ejemplo: `KafkaProducer.cs`, `KafkaSettings.cs`.
 
 - **Search/**  
-  Acá se puede implementar la lógica relacionada con búsquedas avanzadas, por ejemplo integración con ElasticSearch o consultas específicas. Ejemplo: `UserSearchService.cs`, `PermissionSearchService.cs`.
+  Implementación de servicios relacionados con búsquedas avanzadas o integraciones con motores como Elasticsearch. Ejemplo: `ElasticsearchService.cs`.
 
-### AccessControlSystem.API/
+---
+
+## AccessControlSystem.API/
 
 - **Controllers/**  
-  Aquí van los controladores que exponen los endpoints REST para el sistema de control de acceso, por ejemplo `UserController.cs`, `RoleController.cs`.
+  Controladores Web API que exponen los endpoints REST para la interacción con el sistema, manejan las solicitudes HTTP y devuelven las respuestas adecuadas. Ejemplos: `PermissionController.cs`, `PermissionTypeController.cs`.
 
 ---
 
@@ -108,47 +123,66 @@ AccessControlSystem es una aplicación modular diseñada para gestionar el contr
 ## Árbol de carpetas y archivos
 
 ```plaintext
+AccessControlSystem.API/
+└── Controllers/
+    ├── PermissionController.cs
+    └── PermissionTypeController.cs
+
 AccessControlSystem.Application/
 ├── Commands/
-│   ├── CreateUserCommand.cs
-│   ├── UpdatePermissionCommand.cs
-│   └── DeleteRoleCommand.cs
+│   ├── CreatePermissionTypeCommand.cs
+│   ├── CreatePermissionTypeHandler.cs
+│   ├── ModifyPermissionCommand.cs
+│   ├── ModifyPermissionHandler.cs
+│   ├── RequestPermissionCommand.cs
+│   └── RequestPermissionHandler.cs
 ├── DTOs/
-│   ├── UserDto.cs
 │   ├── PermissionDto.cs
-│   └── RoleDto.cs
+│   ├── PermissionEventDto.cs
+│   └── PermissionTypeDto.cs
 ├── External/
-│   ├── ExternalAuthService.cs
-│   └── PaymentGatewayClient.cs
-└── Mappings/
-    ├── UserMappingProfile.cs
-    └── PermissionMappingProfile.cs
+│   ├── IElasticsearchService.cs
+│   └── IKafkaProducer.cs
+├── Mappings/
+│   └── MappingProfile.cs
+└── Queries/
+    ├── GetPermissionsHandler.cs
+    ├── GetPermissionsQuery.cs
+    ├── GetPermissionTypeHandler.cs
+    └── GetPermissionTypeQuery.cs
 
 AccessControlSystem.Domain/
 ├── Entities/
-│   ├── User.cs
-│   ├── Role.cs
-│   └── Permission.cs
-├── Enums/
-│   ├── UserRole.cs
+│   ├── Permission.cs
 │   └── PermissionType.cs
-└── Exceptions/
-    ├── UserNotFoundException.cs
-    └── PermissionDeniedException.cs
+├── Enums/
+│   └── OperationType.cs
+└── Repositories/
+    ├── IPermissionRepository.cs
+    ├── IPermissionTypeRepository.cs
+    ├── IRepository.cs
+    └── IUnitOfWork.cs
 
 AccessControlSystem.Infrastructure/
+├── Messaging/
+│   ├── KafkaProducer.cs
+│   └── KafkaSettings.cs
 ├── Persistence/
-│   ├── AccessControlDbContext.cs
-│   ├── UserRepository.cs
-│   └── RoleRepository.cs
+│   ├── ApplicationDbContext.cs
+│   ├── PermissionRepository.cs
+│   ├── PermissionTypeRepository.cs
+│   ├── Repository.cs
+│   └── UnitOfWork.cs
 └── Search/
-    ├── UserSearchService.cs
-    └── PermissionSearchService.cs
+    ├── ElasticsearchService.cs
+    └── ElasticSettings.cs
 
-AccessControlSystem.API/
-└── Controllers/
-    ├── UserController.cs
-    └── RoleController.cs
+Tests/
+└── UnitTests/
+    ├── GetPermissionsHandlerTests.cs
+    ├── ModifyPermissionHandlerTests.cs
+    └── RequestPermissionHandlerTests.cs
+
 ```
 
 ## Estructura del Proyecto Frontend (AccessControlSystem.Web)
