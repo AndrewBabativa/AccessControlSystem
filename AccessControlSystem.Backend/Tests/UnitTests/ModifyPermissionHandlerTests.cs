@@ -42,8 +42,7 @@ public class ModifyPermissionHandlerTests
             Id = 1,
             EmployeeFirstName = "John",
             EmployeeLastName = "Doe",
-            PermissionTypeId = 2,
-            PermissionDate = DateTime.Today
+            PermissionTypeId = 2
         };
 
         var permission = new Permission
@@ -60,8 +59,7 @@ public class ModifyPermissionHandlerTests
             Id = permission.Id,
             EmployeeFirstName = command.EmployeeFirstName,
             EmployeeLastName = command.EmployeeLastName,
-            PermissionTypeId = command.PermissionTypeId,
-            PermissionDate = command.PermissionDate
+            PermissionTypeId = command.PermissionTypeId
         };
 
         _unitOfWorkMock.Setup(x => x.Permissions.GetByIdAsync(command.Id))
@@ -76,7 +74,6 @@ public class ModifyPermissionHandlerTests
         Assert.Equal(command.EmployeeFirstName, result.EmployeeFirstName);
         Assert.Equal(command.EmployeeLastName, result.EmployeeLastName);
         Assert.Equal(command.PermissionTypeId, result.PermissionTypeId);
-        Assert.Equal(command.PermissionDate, result.PermissionDate);
 
         _unitOfWorkMock.Verify(x => x.SaveChangesAsync(), Times.Once);
         _elasticServiceMock.Verify(x => x.IndexPermissionAsync(dto), Times.Once);

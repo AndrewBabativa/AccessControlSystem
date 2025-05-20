@@ -1,7 +1,7 @@
-CREATE DATABASE [PermissionsDB];
+CREATE DATABASE [AccessControlDb];
 GO
 
-USE [PermissionsDB];
+USE [AccessControlDb];
 GO
 
 SET ANSI_NULLS ON

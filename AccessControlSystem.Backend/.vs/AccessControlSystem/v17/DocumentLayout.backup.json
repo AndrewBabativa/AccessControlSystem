@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\AndresBG\\Test\\",
+  "WorkspaceRootPath": "C:\\AndresBG\\AccessControlSystem.Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|c:\\andresbg\\test\\accesscontrolsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|solutionrelative:accesscontrolsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|c:\\andresbg\\test\\accesscontrolsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|c:\\andresbg\\accesscontrolsystem.backend\\accesscontrolsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|solutionrelative:accesscontrolsystem.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{78AEE224-EE2A-4ACA-BAB3-0C774B0E1BB5}|AccessControlSystem.Application\\AccessControlSystem.Application.csproj|c:\\andresbg\\test\\accesscontrolsystem.application\\commands\\requestpermissionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|c:\\andresbg\\accesscontrolsystem.backend\\accesscontrolsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|solutionrelative:accesscontrolsystem.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78AEE224-EE2A-4ACA-BAB3-0C774B0E1BB5}|AccessControlSystem.Application\\AccessControlSystem.Application.csproj|c:\\andresbg\\accesscontrolsystem.backend\\accesscontrolsystem.application\\commands\\requestpermissionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{78AEE224-EE2A-4ACA-BAB3-0C774B0E1BB5}|AccessControlSystem.Application\\AccessControlSystem.Application.csproj|solutionrelative:accesscontrolsystem.application\\commands\\requestpermissionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{39859C91-72E6-49E5-9A7B-DDB01B5C48EA}|AccessControlSystem.Infrastructure\\AccessControlSystem.Infrastructure.csproj|c:\\andresbg\\test\\accesscontrolsystem.infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{39859C91-72E6-49E5-9A7B-DDB01B5C48EA}|AccessControlSystem.Infrastructure\\AccessControlSystem.Infrastructure.csproj|c:\\andresbg\\accesscontrolsystem.backend\\accesscontrolsystem.infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{39859C91-72E6-49E5-9A7B-DDB01B5C48EA}|AccessControlSystem.Infrastructure\\AccessControlSystem.Infrastructure.csproj|solutionrelative:accesscontrolsystem.infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|c:\\andresbg\\test\\accesscontrolsystem.api\\accesscontrolsystem.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|c:\\andresbg\\accesscontrolsystem.backend\\accesscontrolsystem.api\\accesscontrolsystem.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{3FC357C9-3168-4F4F-A027-92DFE3768413}|AccessControlSystem.API\\AccessControlSystem.Api.csproj|solutionrelative:accesscontrolsystem.api\\accesscontrolsystem.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
@@ -30,71 +30,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "RequestPermissionHandler.cs",
-              "DocumentMoniker": "C:\\AndresBG\\Test\\AccessControlSystem.Application\\Commands\\RequestPermissionHandler.cs",
+              "DocumentMoniker": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.Application\\Commands\\RequestPermissionHandler.cs",
               "RelativeDocumentMoniker": "AccessControlSystem.Application\\Commands\\RequestPermissionHandler.cs",
-              "ToolTip": "C:\\AndresBG\\Test\\AccessControlSystem.Application\\Commands\\RequestPermissionHandler.cs",
+              "ToolTip": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.Application\\Commands\\RequestPermissionHandler.cs",
               "RelativeToolTip": "AccessControlSystem.Application\\Commands\\RequestPermissionHandler.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAgwDoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T03:26:39.418Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-19T03:26:39.418Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\AndresBG\\Test\\AccessControlSystem.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.Infrastructure\\Persistence\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "AccessControlSystem.Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\AndresBG\\Test\\AccessControlSystem.Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.Infrastructure\\Persistence\\ApplicationDbContext.cs",
               "RelativeToolTip": "AccessControlSystem.Infrastructure\\Persistence\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T12:10:16.121Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T12:10:16.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\AndresBG\\Test\\AccessControlSystem.API\\appsettings.json",
+              "DocumentMoniker": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.API\\appsettings.json",
               "RelativeDocumentMoniker": "AccessControlSystem.API\\appsettings.json",
-              "ToolTip": "C:\\AndresBG\\Test\\AccessControlSystem.API\\appsettings.json",
+              "ToolTip": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.API\\appsettings.json",
               "RelativeToolTip": "AccessControlSystem.API\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAYwBUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-05-18T11:39:34.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\AndresBG\\Test\\AccessControlSystem.API\\Program.cs",
+              "DocumentMoniker": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.API\\Program.cs",
               "RelativeDocumentMoniker": "AccessControlSystem.API\\Program.cs",
-              "ToolTip": "C:\\AndresBG\\Test\\AccessControlSystem.API\\Program.cs",
+              "ToolTip": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.API\\Program.cs",
               "RelativeToolTip": "AccessControlSystem.API\\Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACYAAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T09:17:39.763Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T09:17:39.763Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "AccessControlSystem.Api",
-              "DocumentMoniker": "C:\\AndresBG\\Test\\AccessControlSystem.API\\AccessControlSystem.Api.csproj",
+              "DocumentMoniker": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.API\\AccessControlSystem.Api.csproj",
               "RelativeDocumentMoniker": "AccessControlSystem.API\\AccessControlSystem.Api.csproj",
-              "ToolTip": "C:\\AndresBG\\Test\\AccessControlSystem.API\\AccessControlSystem.Api.csproj",
+              "ToolTip": "C:\\AndresBG\\AccessControlSystem.Backend\\AccessControlSystem.API\\AccessControlSystem.Api.csproj",
               "RelativeToolTip": "AccessControlSystem.API\\AccessControlSystem.Api.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-18T07:17:27.686Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T07:17:27.686Z"
             }
           ]
         }

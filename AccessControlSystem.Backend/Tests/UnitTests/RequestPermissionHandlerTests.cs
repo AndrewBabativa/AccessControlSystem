@@ -24,8 +24,7 @@ public class RequestPermissionHandlerTests
         {
             EmployeeFirstName = "Juan",
             EmployeeLastName = "Pérez",
-            PermissionTypeId = 1,
-            PermissionDate = new DateTime(2024, 1, 1)
+            PermissionTypeId = 1
         };
 
         var permission = new Permission
@@ -33,16 +32,14 @@ public class RequestPermissionHandlerTests
             Id = 1,
             EmployeeFirstName = command.EmployeeFirstName,
             EmployeeLastName = command.EmployeeLastName,
-            PermissionTypeId = command.PermissionTypeId,
-            PermissionDate = command.PermissionDate
+            PermissionTypeId = command.PermissionTypeId
         };
 
         var dto = new PermissionDto
         {
             Id = 1,
             EmployeeFirstName = "Andres",
-            EmployeeLastName = "Babativa",
-            PermissionDate = command.PermissionDate
+            EmployeeLastName = "Babativa"
         };
 
         mockMapper.Setup(m => m.Map<Permission>(command)).Returns(permission);

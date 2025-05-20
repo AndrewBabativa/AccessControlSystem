@@ -9,3 +9,5 @@
 *.user
 *.suo
 *.db
+# Visual Studio
+.vs/
