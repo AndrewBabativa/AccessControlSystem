@@ -62,8 +62,6 @@ AccessControlSystem es una aplicación modular diseñada para gestionar el contr
 ---
 ## Estructura del Proyecto Backend (AccessControlSystem.Backend)
 
-### AccessControlSystem.Application/
-
 # Estructura del Proyecto AccessControlSystem
 
 ## AccessControlSystem.Application/
@@ -117,8 +115,6 @@ AccessControlSystem es una aplicación modular diseñada para gestionar el contr
   Controladores Web API que exponen los endpoints REST para la interacción con el sistema, manejan las solicitudes HTTP y devuelven las respuestas adecuadas. Ejemplos: `PermissionController.cs`, `PermissionTypeController.cs`.
 
 ---
-
-## Estructura del Proyecto Backend (AccessControlSystem.Backend)
 
 ## Árbol de carpetas y archivos
 
