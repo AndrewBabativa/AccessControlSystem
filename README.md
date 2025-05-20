@@ -62,8 +62,6 @@ AccessControlSystem es una aplicación modular diseñada para gestionar el contr
 ---
 ## Estructura del Proyecto Backend (AccessControlSystem.Backend)
 
-# Estructura del Proyecto AccessControlSystem
-
 ## AccessControlSystem.Application/
 
 - **Commands/**  
